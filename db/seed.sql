@@ -32,3 +32,22 @@ CREATE TABLE employee_db(
 -- INSERT INTO actors (name, coolness_points, attitude) VALUES ("Elaine", 80, "righteous");
 -- INSERT INTO actors (name, coolness_points, attitude) VALUES ("Kramer", 20, "doofus");
 -- INSERT INTO actors (name, coolness_points, attitude) VALUES ("George", 70, "selfish")
+
+
+/*
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.get('/cast', function (req, res) {
+    res.sendFile(path.join(__dirname, 'view.html'));
+  });
+  
+  app.get('/coolness-chart', function (req, res) {
+    res.sendFile(path.join(__dirname, 'add.html'));
+  });
+  
+  // Displays all characters
+  app.get('/attitude-chart/:att', function (req, res) {
+    return res.json(characters);
+  });
+  */
