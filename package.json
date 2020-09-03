@@ -1,0 +1,28 @@
+{
+  "name": "employer-tracker",
+  "version": "1.0.0",
+  "description": "Tracking employee",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robeil/employer-tracker.git"
+  },
+  "author": "Robeil Aregawi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Robeil/employer-tracker/issues"
+  },
+  "homepage": "https://github.com/Robeil/employer-tracker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "inquirer": "^7.3.3",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.4",
+    "package": "^1.0.1"
+  }
+}
