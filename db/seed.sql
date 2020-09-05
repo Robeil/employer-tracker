@@ -1,53 +1,19 @@
-DROP DATABASE IF EXISTS employee_data;
-CREATE DATABASE employee_data;
-USE employee_data;
+USE got_character;
+ 
+ INSERT INTO house
+ (name)
 
--- Create the table actors.
-CREATE TABLE department_db(
-  id int AUTO_INCREMENT,
-  name varchar(30) NOT NULL,
-  PRIMARY KEY(id)
-);
+ VALUES
+ ('JM,NHKN')
+ ('UHIBJNL')
+ ('IYHKJNM')
 
-CREATE TABLE role_db(
-  id int AUTO_INCREMENT,
-  title VARCHAR(30),
-  salary DECIMAL,
-  department_id INT,
-  PRIMARY KEY(id)
-);
-
-CREATE TABLE employee_db(
- id int AUTO_INCREMENT,
-  first_name VARCHAR(30),
-  last_name VARCHAR(30),
-  role_id INT,
-  manager_id INT,
-  PRIMARY KEY(id)
-);
-
-
-
--- INSERT INTO actors (name, coolness_points, attitude) VALUES ("Jerry", 90, "relaxed");
--- INSERT INTO actors (name, coolness_points, attitude) VALUES ("Elaine", 80, "righteous");
--- INSERT INTO actors (name, coolness_points, attitude) VALUES ("Kramer", 20, "doofus");
--- INSERT INTO actors (name, coolness_points, attitude) VALUES ("George", 70, "selfish")
-
-
-/*
-
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.get('/cast', function (req, res) {
-    res.sendFile(path.join(__dirname, 'view.html'));
-  });
-  
-  app.get('/coolness-chart', function (req, res) {
-    res.sendFile(path.join(__dirname, 'add.html'));
-  });
-  
-  // Displays all characters
-  app.get('/attitude-chart/:att', function (req, res) {
-    return res.json(characters);
-  });
-  */
+ INSERT
+(name, salary, house_id)
+VALUES
+('UOGOGJHLH', 1511,1)
+('UOGOGJHLH', 354658679,2)
+('UOGOGJHLH', 2143,3)
+('UOGOGJHLH',324,2)
+('UOGOGJHLH',5432,3)
+('UOGOGJHLH',6543,3)
