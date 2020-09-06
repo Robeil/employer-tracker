@@ -20,12 +20,16 @@
   "homepage": "https://github.com/Robeil/employer-tracker#readme",
   "dependencies": {
     "asciiart-logo": "^0.2.6",
+    "caporal": "^1.4.0",
+    "console": "^0.7.2",
+    "console.table": "^0.10.0",
     "db": "^3.1.0",
     "express": "^4.17.1",
-    "inquirer": "^7.3.3",
+    "inquirer": "^0.2.5",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.4",
     "package": "^1.0.1",
-    "util": "^0.12.3"
+    "util": "^0.12.3",
+    "yargs": "^15.4.1"
   }
 }

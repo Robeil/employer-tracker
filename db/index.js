@@ -2,7 +2,6 @@
 
 const connection = require('./coonecton');
 
-// module.exports = new DB(connection)
 
 class DB {
     constructor(connection) {
@@ -26,8 +25,20 @@ class DB {
             `
         );
     }
- 
-    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
     viewAllTitles() {
         return this.connection.query(
             `
@@ -42,22 +53,9 @@ class DB {
         );
     }
 
-viewAllhouses() {
-    return this.connection.query(
-        `
-    SELECT
-        title.id,
-        title.name AS Title,
-        title.salary AS Salary,
-        house.name AS House
-    FROM
-        title
-    LEFT JOIN
-        house ON title.house_id = house.id
-    ORDER BY
-        title.id;
-        `
-    );
-    }
 
-    // module.exports = new DB(connection)
+}
+*/
+    //module.exports = new DB(connection);
+  // module.exports = new DB(connection)
+

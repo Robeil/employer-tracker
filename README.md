@@ -1,6 +1,4 @@
 Unit 12 MySQL Homework: Employee Tracker
-
-
 Developers are often tasked with creating interfaces that make it easy for non-developers to view and interact with information stored in databases. Often these interfaces are known as Content Management Systems. In this homework assignment, your challenge is to architect and build a solution for managing a company's employees using node, inquirer, and MySQL.
 
 Instructions
@@ -14,6 +12,7 @@ department:
 id - INT PRIMARY KEY
 
 name - VARCHAR(30) to hold department name
+
 
 
 role:
@@ -44,56 +43,56 @@ manager_id - INT to hold reference to another employee that manager of the curre
 
 
 
-## Build a command-line application that at a minimum allows the user to:
+Build a command-line application that at a minimum allows the user to:
 
 
-## Add departments, roles, employees
+Add departments, roles, employees
 
 
-## View departments, roles, employees
+View departments, roles, employees
 
 
-## Update employee roles
+Update employee roles
 
 
-## Bonus points if you're able to:
+Bonus points if you're able to:
 
 
-## Update employee managers
+Update employee managers
 
 
-## View employees by manager
+View employees by manager
 
 
-## Delete departments, roles, and employees
+Delete departments, roles, and employees
 
 
-## View the total utilized budget of a department -- ie the combined salaries of all employees in that department
+View the total utilized budget of a department -- ie the combined salaries of all employees in that department
 
 
-## We can frame this challenge as follows:
-## As a business owner
-## I want to be able to view and manage the departments, roles, and employees in my company
-## So that I can organize and plan my business
-## How do you deliver this? Here are some guidelines:
+We can frame this challenge as follows:
+As a business owner
+I want to be able to view and manage the departments, roles, and employees in my company
+So that I can organize and plan my business
+How do you deliver this? Here are some guidelines:
 
 
-## Use the MySQL NPM package to connect to your MySQL database and perform queries.
+Use the MySQL NPM package to connect to your MySQL database and perform queries.
 
 
-## Use InquirerJs NPM package to interact with the user via the command-line.
+Use InquirerJs NPM package to interact with the user via the command-line.
 
 
-## Use console.table to print MySQL rows to the console. There is a built-in version of console.table, but the NPM package formats the data a little better for our purposes.
+Use console.table to print MySQL rows to the console. There is a built-in version of console.table, but the NPM package formats the data a little better for our purposes.
 
 
-## Use asciiart-logo NPM package to add some visual flare to the main logo.
+Use asciiart-logo NPM package to add some visual flare to the main logo.
 
 
-## You may wish to have a separate file containing functions for performing specific SQL queries you'll need to use. Could a constructor function or a class be helpful for organizing these?
+You may wish to have a separate file containing functions for performing specific SQL queries you'll need to use. Could a constructor function or a class be helpful for organizing these?
 
 
-## You will need to perform a variety of SQL JOINS to complete this assignment, and it's recommended you review the week's activities if you need a refresher on this.
+You will need to perform a variety of SQL JOINS to complete this assignment, and it's recommended you review the week's activities if you need a refresher on this.
 
 
 
@@ -101,16 +100,16 @@ manager_id - INT to hold reference to another employee that manager of the curre
 Hints
 
 
-## You may wish to include a seed.sql file to pre-populate your database. This will make development of individual features much easier.
+You may wish to include a seed.sql file to pre-populate your database. This will make development of individual features much easier.
 
 
-## Focus on getting the basic functionality completed before working on more advanced features.
+Focus on getting the basic functionality completed before working on more advanced features.
 
 
-## Review the week's activities for a refresher on MySQL.
+Review the week's activities for a refresher on MySQL.
 
 
-## Check out SQL Bolt for some extra MySQL help.
+Check out SQL Bolt for some extra MySQL help.
 
 
 
@@ -126,13 +125,13 @@ GitHub repository with a unique name and a README describing the project.
 The command-line application should allow users to:
 
 
-## Add departments, roles, employees
+Add departments, roles, employees
 
 
-## View departments, roles, employees
+View departments, roles, employees
 
 
-## Update employee roles
+Update employee roles
 
 
 
@@ -144,16 +143,16 @@ Bonus
 The command-line application should allow users to:
 
 
-## Update employee managers
+Update employee managers
 
 
-## View employees by manager
+View employees by manager
 
 
-## Delete departments, roles, and employees
+Delete departments, roles, and employees
 
 
-## View the total utilized budget of a department -- ie the combined salaries of all employees in that department
+View the total utilized budget of a department -- ie the combined salaries of all employees in that department
 
 
 
@@ -172,10 +171,10 @@ Your commit history allows you to revert your codebase in the event that you nee
 Follow these guidelines for committing:
 
 
-## Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
+Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
 
 
-## Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
+Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
 
 
 Don't commit half-done work, for the sake of your collaborators (and your future self!).
@@ -190,11 +189,11 @@ Submission on BCS
 You are required to submit the following:
 
 
-## The URL of the GitHub repository
+The URL of the GitHub repository
 
 
-## A video demonstrating the entirety of the app's functionality
+A video demonstrating the entirety of the app's functionality
 
 
 
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserve
+© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
