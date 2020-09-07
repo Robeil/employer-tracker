@@ -55,37 +55,7 @@ async function addDepartment() {
 
   mainPrompt();
 }
-// function to add new role
-async function addRole() {
-  const { title, salary, department_id } = await inquirer.prompt(prompts.addRole);
-  const newRole = await db.addRole(title, salary, department_id);
 
-  console.log('\n');
-  console.log(
-    `New Role:
-      Title: ${title}
-      Salary: ${salary}
-      Department_ID: ${department_id}
-      `
-  );
-
-  mainPrompt();
-}
-// function to view all new employee
-async function addEmployee() {
-  const { first_name, last_name, role_id, manager_id } = await inquirer.prompt(prompts.addEmployee);
-  console.log(first_name, last_name, role_id, manager_id);
-
-  mainPrompt();
-}
-// function to end all the functions
-function End() {
-  db.End();
-  process.on('End', function(code) {
-      return console.log(`ending ${code}`);
-  });
-  process.End();
-}
 // function that generate all the questions
 async function mainPrompt() {
   const { mainPrompt } = await inquirer.prompt(prompts);
