@@ -31,5 +31,7 @@
     "package": "^1.0.1",
     "util": "^0.12.3",
     "yargs": "^15.4.1"
-  }
+  },
+  "devDependencies": {},
+  "keywords": []
 }

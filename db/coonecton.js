@@ -2,7 +2,7 @@
 
 const mysql = require('mysql');
 const util = require('util');
-
+//creating connection to mysql workbench
 const connection = mysql.createConnection({
     host: 'localhost',
     

@@ -1,5 +1,4 @@
-const inquirer = require('inquirer');
-
+//const inquirer = require('inquirer');
 module.exports = {
 
     mainPrompt: [{
@@ -7,40 +6,34 @@ module.exports = {
         name: 'choice',
         message: 'What would you like to add?',
         choice: [{
-            name: 'View all characters',
-            value: 'View_characters',
+            name: 'View all Departments',
+            value: 'View_Departments',
         },
         {
-            name: 'Add character',
-            value: 'Add_character',
+            name: 'View All Employee Roles',
+            value: 'View_employee_Roles',
         },
         {
-            name: 'Update character Role',
-            value: 'Update_character_Role',
+            name: 'View all Employees',
+            value: 'View_Employees',
         },
         {
-            name: 'View all Titles',
-            value: 'View_titles',
+            name: 'Vie Add Department ',
+            value: 'Add_Department',
         },
         {
-            name: 'Add Title',
-            value: 'Add_title',
+            name: 'Add Role',
+            value: 'add_role',
         },
         {
-            name: 'View all Houses',
-            value: 'ViewAllHouses',
+            name: 'Add Employee',
+            value: 'Add_Employee',
         },
         {
-            name: 'Add House',
-            value: 'Add_House',
-        },
-        {
-            name: 'Quit',
-            value: 'Quit',
+            name: 'End',
+            value: 'End',
         },
         ],
-
-
     },
     ],
 
@@ -68,9 +61,10 @@ module.exports = {
         name: 'department_id',
         message: 'Department ID:'
 
-    }
+    },
+    ],
 
-addEmployee: [{
+    addEmployee: [{
         type: 'input',
         name: 'first_name',
         message: 'Employee\'s First Name:'
@@ -93,28 +87,46 @@ addEmployee: [{
 
     }
     ],
-        addEmployee: [{
-            type: 'input',
-            name: 'first_name',
-            message: 'Employee\'s First Name:'
-        },
-        {
-            type: 'input',
-            name: 'last_name',
-            message: 'Employee\'s Last Name:'
-        },
-        {
-            type: 'number',
-            name: 'role_id',
-            message: 'Employee\'s Role ID:'
-            
-        },
-        {
-            type: 'number',
-            name: 'manager_id',
-            message: 'Employee\'s Manager\'s ID:',
+    updateEmployee_function: function(firstName, lastName, roleID, managerID) {
+        return [
+            {
+                type: "input",
+                name: "first_name",
+                message: "Employee\'s First Name:"
+            },
+            {
+                type: "input",
+                name: "last_name",
+                message: "Employee\'s Last Name:"
+            },
+            {
+                type: "number",
+                name: "role_id",
+                message: "Employee's Role ID:"
+
+            },
+            {
+                type: "number",
+                name: "manager_id",
+                message: "Employee's Manager's ID:"
          
-        }
-    ],
-    ]
-}
+            }
+        ]
+    },
+
+    deleteEmployee: [{
+        type: "confirm",
+        name: "confirmDelete",
+        message: "Are you sure you wont delete this record?",
+        default: "no"
+    }],
+
+    viewEmployeesByManager: [{
+        type: "number",
+        name: "manager_id",
+        message: "Search all employees by Manager's ID:"
+    }]
+
+};
+
+
