@@ -19,42 +19,7 @@ async function viewAllTitles() {
   mainPrompt()
 }
 // function to view all the department
-async function viewAllDepartments() {
-  const departments = await db.viewAllDepartments();
 
-  console.log('/n');
-  console.table(departments);
-
-  mainPrompt()
-}
-// function to view all the roles
-async function viewAllRoles() {
-  const roles = await db.viewallRoles();
-
-  console.log('/n');
-  console.table(roles);
-
-  mainPrompt()
-}
-// function to view all the employees
-async function viewAllEmployees() {
-  const employees = await db.viewAllEmployees();
-
-  console.log('\n');
-  console.table(employees);
-
-  mainPrompt();
-}
-// function to view all the department
-async function addDepartment() {
-  const { name } = await inquirer.prompt(prompts.addDepartment);
-  const newDepartmentt = await db.addDepartment(name);
-
-  console.log('\n');
-  console.log(`New Department ${name}`);
-
-  mainPrompt();
-}
 
 // function that generate all the questions
 async function mainPrompt() {
