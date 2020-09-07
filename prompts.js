@@ -129,4 +129,6 @@ module.exports = {
 
 };
 
-
+updateEmployee: [{
+    type: 'number'
+}]
