@@ -116,7 +116,6 @@ async function mainPrompt() {
       break;
   }
 }
-// calling the the question generator
-mainPrompt();
+
 
 
