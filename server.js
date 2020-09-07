@@ -1,5 +1,5 @@
 'use strict';
-let inquirer = require('inquirer');
+const inquirer = require('inquirer');
 const logo = require('asciiart-logo');
 const prompts = require('./prompts');
 const db = require('./db');
