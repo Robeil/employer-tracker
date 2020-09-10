@@ -1,6 +1,6 @@
 'use strict';
 
-const connection = require('./coonecton.js');
+const connection = require('./connection');
 
 
 
@@ -13,17 +13,16 @@ class DB {
         connection.end();
     };
     
-        // GET METHODS
-        viewAllDepts() {
+        viewAllDepartment() {
             return this.connection.query(
                 `
                 SELECT
-                    departments.id,
-                    departments.name AS Department
+                    department.id,
+                    department.name AS Department
                 FROM
-                    departments
+                    department
                 ORDER BY
-                    departments.id;
+                    department.id;
                 `
             );
         };
@@ -32,16 +31,16 @@ class DB {
             return this.connection.query(
                 `
             SELECT
-                roles.id,
-                roles.title AS Role,
-                roles.salary AS Salary,
-                departments.name AS Department
+                role.id,
+                role.title AS Role,
+                role.salary AS Salary,
+                department.name AS Department
             FROM
-                roles
+                role
             LEFT JOIN
-                departments ON roles.department_id = departments.id
+                department ON role.department_id = department.id
             ORDER BY
-                roles.id;
+                role.id;
                 ` 
             );
         };
@@ -53,15 +52,15 @@ class DB {
                 e1.id AS ID,
                 e1.first_name AS First_Name,
                 e1.last_name AS Last_Name,
-                roles.title AS Role,
+                role.title AS Role,
                 CONCAT(e2.first_name, ' ', e2.last_name) AS Manager_Name,
                 e1.manager_id AS Manager_ID
             FROM
-                employees e1
+                employee e1
             LEFT JOIN
                 roles ON e1.role_id = roles.id
             LEFT JOIN
-                employees e2 ON e1.manager_id = e2.id
+                employee e2 ON e1.manager_id = e2.id
                 ORDER BY
                     e1.id;
                 `
@@ -72,28 +71,27 @@ class DB {
             return this.connection.query(
                 `
                 SELECT
-                employees.id,
-                employees.first_name,
-                employees.last_name,
-                employees.role_id,
-                employees.manager_id
+                employee.id,
+                employee.first_name,
+                employee.last_name,
+                employee.role_id,
+                employee.manager_id
             FROM
-                employees
+                employee
                 WHERE
-                employees.id = ?;
+                employee.id = ?;
                 `, [id]
             );
         };
     
     
-        // POST METHODS
-        addDepartment(dept) {
+        addDepartment(department) {
             return this.connection.query(
                 `
                 INSERT INTO 
-                    departments (name)
+                    department (name)
                 VALUES (?);
-                `, [dept]
+                `, [department]
             );
         };
     
@@ -101,7 +99,7 @@ class DB {
             return this.connection.query(
                 `
                 INSERT INTO 
-                    roles (title, salary, department_id)
+                    role (title, salary, department_id)
                 VALUES (?, ?, ?);
                 `, [
                     title,
@@ -114,17 +112,15 @@ class DB {
     
         addEmployee(first_name, last_name, role_id, manager_id) {
             return this.connection.query(
-                `INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?);`, [first_name, last_name, role_id, manager_id]
+                `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?);`, [first_name, last_name, role_id, manager_id]
             );
         };
     
-    
-        // PUT METHOD
         updateEmployee(id, first_name, last_name, role_id, manager_id) {
             return this.connection.query(
                 `
                 UPDATE 
-                    employees
+                    employee
                 SET ?
                 WHERE ?;
                 `, [
@@ -141,12 +137,12 @@ class DB {
             );
         };
     
-        // DELETE METHOD
+
         deleteEmployee(id) {
             return this.connection.query(
                 `
                 DELETE FROM 
-                    employees 
+                    employee
                 WHERE
                     id = ?;
                 `, [id]
@@ -154,7 +150,7 @@ class DB {
         };
     
 
-    // VIEW EMPLOYEES BY MANAGER
+
     viewEmployeesByManager(manager_id) {
         return this.connection.query(
             `
