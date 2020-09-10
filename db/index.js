@@ -12,8 +12,7 @@ class DB {
     end() {
         connection.end();
     };
-<<<<<<< HEAD
-    /*
+    
         // GET METHODS
         viewAllDepts() {
             return this.connection.query(
@@ -153,7 +152,8 @@ class DB {
                 `, [id]
             );
         };
-    */
+    
+
     // VIEW EMPLOYEES BY MANAGER
     viewEmployeesByManager(manager_id) {
         return this.connection.query(
@@ -162,15 +162,16 @@ class DB {
             e1.id AS ID,
             e1.first_name AS First_Name,
             e1.last_name AS Last_Name,
-            roles.title AS Role,
+            role.title AS Role,
             CONCAT(e2.first_name, ' ', e2.last_name) AS Manager_Name,
             e1.manager_id AS Manager_ID
         FROM
-            employees e1
+            employee e1
         LEFT JOIN
-            roles ON e1.role_id = roles.id
+            role ON e1.role_id = role.id
         LEFT JOIN
-            employees e2 ON e1.manager_id = e2.id
+            employee
+             e2 ON e1.manager_id = e2.id
             WHERE
             e1.manager_id = ?;
             `, [manager_id]
@@ -179,9 +180,5 @@ class DB {
 
 
 }
-=======
-
-  
->>>>>>> 5818316fb69b4546c537715341c3d4307b4788a0
 
 module.exports = new DB(connection)

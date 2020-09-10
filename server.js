@@ -6,8 +6,6 @@ const prompts = require('./prompts');
 const db = require('./db');
 require('console.table');
 
-
-
 async function viewEmployeeByManager() {
     const {manager_id} = await inquirer.prompt(prompts.viewEmployeesByManager);
     const employeesByManager = await db.viewEmployeesByManager(manager_id);
@@ -16,11 +14,11 @@ async function viewEmployeeByManager() {
 
     mainPrompt();
 }
-
+ 
 
 async function mainPrompt() {
-    const { mainPrompt } = await inquirer.prompt(prompts.mainPrompt);
-
+const { mainPrompt }  = await inquirer.prompt(prompts.mainPrompt);
+ 
     switch (mainPrompt) {
         case "View All Departments":
             viewAllDepts();

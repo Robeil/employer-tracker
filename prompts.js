@@ -3,7 +3,8 @@ module.exports = {
         type: "list",
         name: "mainPrompt",
         message: "Select the action you'd like to perform:",
-        choices: ["View All Employees",
+        choices: [
+
             "View Employees by Manager",
             "View All Departments",
             "Add New Department",
@@ -14,14 +15,13 @@ module.exports = {
             "Add New Role",
             "Exit"]
     }],
-/*
+
     addDepartment: [{
         type: "input",
         name: "name",
         message: "Title of new Department:"
     }],
 
-<<<<<<< HEAD
     addRole: [{
         type: "input",
         name: "title",
@@ -105,8 +105,5 @@ module.exports = {
         name: "manager_id",
         message: "Search all employees by Manager's ID:"
     }]
-*/
+
 }
-=======
-    
->>>>>>> 5818316fb69b4546c537715341c3d4307b4788a0
