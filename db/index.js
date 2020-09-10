@@ -12,6 +12,7 @@ class DB {
     end() {
         connection.end();
     };
+<<<<<<< HEAD
     /*
         // GET METHODS
         viewAllDepts() {
@@ -178,5 +179,9 @@ class DB {
 
 
 }
+=======
+
+  
+>>>>>>> 5818316fb69b4546c537715341c3d4307b4788a0
 
 module.exports = new DB(connection)

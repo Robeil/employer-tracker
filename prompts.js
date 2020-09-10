@@ -21,6 +21,7 @@ module.exports = {
         message: "Title of new Department:"
     }],
 
+<<<<<<< HEAD
     addRole: [{
         type: "input",
         name: "title",
@@ -106,3 +107,6 @@ module.exports = {
     }]
 */
 }
+=======
+    
+>>>>>>> 5818316fb69b4546c537715341c3d4307b4788a0
